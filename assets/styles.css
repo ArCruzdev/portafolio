@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-fondo : #010130;
+  --color-generio-letra : #ffffff;
+  --color-subtitulos : #9370d8;
+  --tipo-letra-generico : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --hoverBtn : radial-gradient(circle, rgb(79, 107, 243) 0%, rgb(107, 194, 245) 100%);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-image: url('https://raw.githubusercontent.com/ArCruzdev/imagenes_portfolio/refs/heads/main/fondo1.webp');
+  background-size: cover; /*para que cubra toda la pantalla*/
+  background-position: center; /*centra la imagen en el body*/
+  background-repeat: no-repeat;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*moviles y tablets*/
+
+#posts {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "proyecto proyecto"
+  "ariel redes"
+  "zona contactame";
+}
+
+#posts .card:nth-child(1) {
+  grid-area: ariel;
+}
+
+#posts .card:nth-child(2) {
+  grid-area: proyecto;
+}
+
+#posts .card:nth-child(3) {
+  grid-area: redes;
+}
+
+#posts .card:nth-child(4){
+  grid-area: contactame;
+}
+
+#posts .card:nth-child(5) {
+  grid-area: zona;
+}
+
+.card {
+  border: 3px solid transparent; /* Establecemos un borde transparente para que sea reemplazado por la imagen */
+  border-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(240,240,245,1) 35%, rgba(78,78,78,1) 100%) 1 round;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.603); 
+  padding: 10px;
+  margin: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-shadow: 5px 10px 4px rgba(25, 72, 173, 0.397);
+}
+
+.card img {
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 4px 10px 15px rgba(8, 8, 8, 0.5);
+  object-fit: cover;
+}
+
+
+/* layout de la seccion ariel */
+
+main {
+  flex-wrap: wrap;
+}
+.portada {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  padding: 2rem;
+}
+
+.portada .fotoAriel{
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px blue;
+}
+
+span{
+  color: rgb(255, 0, 234);
+}
+
+.contenedor-titulos {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-subtitulos);
+  font-weight: bold;
+}
+
+.nombre {
+  position: absolute;
+  font-size: 1rem;
+  top: 2rem;
+  left: 2vw;
+}
+
+.container {
+  width: 100%;
+  height: 200px;
+  margin-top: 4rem;
+  /* border: solid thin white; */
+  display: flex;
+  justify-content: center;
+}
+
+.containerSlider {
+  position: relative;
+  width: 600px;
+  height: 180px;
+  /* border: solid red; */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px blue;
+  
+}
+
+.slides {
+  display: flex;
+  gap: 3px;
+  width: 300%;
+  height: 180px;
+  transition: transform .5s ease-in-out;
+  /* border: solid rebeccapurple; */
+  /* transform: translateX(-300%); */
+}
+
+.slides .imgSlide {
+  width: calc(100% / 6);
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.btnLeft, 
+.btnRight{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  background-color: #616163;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.btnLeft:hover,
+.btnRight:hover{
+  background-color: #444446;
+  color: #010130;
+}
+
+.btnLeft {
+  left: .5vw;
+}
+.btnRight {
+  right: .5vw;
+}
+
+.content {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding: 2rem;
+}
+
+.conocimiento { 
+  width: 50%;
+  height: auto;
+}
+
+.content img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px blue;
+}
+
+.content-article {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  margin-top: 1rem;
+
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 40% cover 40%;
+}
+
+.content-article h3 {
+  color: var(--color-subtitulos);
+}
+
+.btnHome {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  position: fixed;
+  bottom: 2vh;
+  right: 2vw;   
+}
+
+.btnHome img {
+  width: inherit;
+  height: auto;
+  object-fit: cover;
+}
+
+#progress {
+  position: fixed;
+  top: 0;
+  width: 0;
+  left: 0;
+  background-color: var(--color-subtitulos);
+  height: 1em;
+  z-index: 1;
+  animation: progress-grow auto linear;
+  animation-timeline: scroll(root block);
+}
+
+@keyframes reveal {
+  from { opacity: 0;}
+  to { opacity: 1;}
+
+}
+
+@keyframes progress-grow {
+  from { width: 0%;}
+  to { width: 100%;}
+}
+
+footer {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+footer a {
+  text-decoration: none;
+}
+
+/* formulario de contacto */
+main {
+  flex-direction: column;
+}
+
+legend {
+font-family: sans-serif;
+font-size: 1.5rem;
+}
+
+.contact-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 15rem;
+}
+
+.contact-form > * {
+width: 100%;
+padding: 0.2rem;
+margin: .1rem auto;
+border-radius: 7px;
+}
+
+.contact-form textarea {
+resize: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+font-size: 1rem;
+font-family: sans-serif;
+}
+
+.contact-form input[type='submit']{
+width: 50%;
+font-weight: bold;
+cursor: pointer;
+}
+
+.contact-form input[type='submit']:hover {
+background: var(--hoverBtn);
+color: white;
+}
+
+.contact-form [required]:valid {
+border: thin solid green;
+}
+.contact-form [required]:invalid {
+border: thin solid red;
+}
+
+.contact-form-error {
+margin-top: 0;
+font-size: 80%;
+background-color: rgb(243, 95, 95);
+color: white;
+transition: all 800ms ease;
+}
+
+.contact-form-error.is-active{
+display: block;
+animation: show-message 1s 1 normal 0s ease-out both;
+}
+.contact-form-loader,
+.contact-form-response {
+text-align: center;
+font-size: 1.2rem;
+}
+.none {
+display: none;
+}
+
+
+@keyframes show-message {
+from {
+  visibility: hidden;
+  opacity: 0;
+}
+to {
+  visibility: visible;
+  opacity: 1;
+}
+}
+
+/*seccion proyectos */
+.section {
+  padding: 2rem;
+  padding-top: 4rem;
+  min-height: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+.container-proyectos{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 10px;
+}
+
+.container-card{
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #e6e5e5;
+  box-shadow: 0 20px 50px rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+}
+
+.container-card img {
+  max-width: 200px;
+}
+
+/*seccion redes*/
+.container-redes {
+  max-width: 1200px;
+}
+
+.slider-redes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.slider-redes::after{
+  content: "";
+  width: 350px;
+  max-width: 350px;
+}
+
+.slider-redes .slides-red{
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #e6e5e5;
+  box-shadow: 0 20px 50px rgba(0, 0, 0,0.5);
+}
+
+.slides-red img {
+  width: 100%;
+  max-width: 350px;
+  height: 270px;
+  object-fit: contain;
+}
+
+/*estilos para las imagenes de las certificaciones*/
+.certificado {
+  width: 50%;
+  height: 450px;
+  object-fit: contain;
+}
+
+/* Aplica los estilos solo si la pantalla escritorio */
+@media screen and (min-width: 1024px) {
+  #posts{
+    width: 100%;
+    max-width: 1500px;
+    height: 100vh;
+    display: grid;
+    gap: 1.5vw;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+     "proyecto proyecto proyecto proyecto ariel ariel"
+     "proyecto proyecto proyecto proyecto ariel ariel"
+     "proyecto proyecto proyecto proyecto ariel ariel"
+     "redes redes contactame contactame zona zona";
+  }
+  
+  
+  
+  #posts .card:nth-child(1) {
+    grid-area: ariel;
+  }
+  
+  #posts .card:nth-child(2) {
+    grid-area: proyecto;
+  }
+  
+  #posts .card:nth-child(3) {
+    grid-area: redes;
+  }
+  
+  #posts .card:nth-child(4){
+    grid-area: contactame;
+  }
+  
+  #posts .card:nth-child(5) {
+    grid-area: zona;
+  }
+  
+  a {
+    border: solid;
+    color: white; 
+    padding: 4px 8px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    display: inline-block;
+    margin: 5px;
+    background-color: black;
+    transition: .2s ease;
+    text-decoration: none;
+  }
+  
+  a:hover{
+    background: radial-gradient(circle, rgb(79, 107, 243) 0%, rgb(107, 194, 245) 100%);
+  }
+  
+  .projectCard img {
+    border-radius: 10px;
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .zonaCard img {
+    border-radius: 10px;
+  }
+ 
+  
+}
+
+/* Aplica los estilos solo si la pantalla tiene un ancho minimo de 1000px */
+
+@media screen and (max-width : 768px) {
+  main {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .portada {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .contenedor-titulos {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+  .portada .fotoAriel {
+    width: 15rem;
+    height: 15rem;
+    margin: 15px;
+  }
+
+  .content {
+    width: 100%;
+  }
+  .content-article{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .content-article img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .conocimiento {
+    width: 100%;
+    margin: 15px;
+  }
+  .conocimiento p {
+    width: 100%;
+  }
+} 

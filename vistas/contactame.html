@@ -1,0 +1,27 @@
+  <button class="btnHome">
+      <a href="#/" class="btnHome">
+        <img src="https://raw.githubusercontent.com/ArCruzdev/imagenes_portfolio/refs/heads/main/casa.webp" alt="foto logo home">
+      </a>
+    </button>
+  <form action="" class="contact-form">
+    <legend>Deja tus datos y te contactare en breve</legend>
+    <label for="nombre">Nombre:</label>
+    <input name="nombre" type="text" required title="El nombre solo acepta letras y espacion en blanco"
+      pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$">
+    <label for="email">Correo:</label>
+    <input name="email" required title="email incorrecto"
+      pattern="^[a-z0-9]+(\.[a-z0-9]+)*@[a-z0-9\-]+(\.[a-z0-9\-]+)*(\.[a-z]{2,15})$">
+    <label for="asunto">Asunto:</label>
+    <input name="asunto" type="text" required title="El ausnto es requerido">
+    <label for="coments">Comentarios:</label>
+    <textarea name="coments" id="" cols="5" rows="5"
+      title="Tu comentario no debe exceder los 255 caracteres"></textarea>
+    <input type="submit" value="Enviar">
+    <div class="contact-form-loader none">
+      <img src="./assets/loader.svg" alt="Cargando...">
+    </div>
+    <div class="contact-form-response none">
+      <p>Los datos han sido enviados</p>
+    </div>
+  </form>
+  <footer><p>desarrollado por Ariel cruz <a href="http://www.linkedin.com/in/ariel-cruz-29a5a057" target="_blank" rel="noopener">linkind👀</a></p></footer>
